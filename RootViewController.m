@@ -31,6 +31,7 @@
 
     _circle = [[bezierPath alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
     [_circle startAnimation];
+    //1211123113213131231
     
 //    [_circle stopAnimation];
 
