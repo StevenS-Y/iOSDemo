@@ -33,7 +33,7 @@
         [self layoutInsideCircleLayer];
 
         
-        _timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(progress:) userInfo:nil repeats:YES];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(progress:) userInfo:nil repeats:YES];
     }
     return self;
 }
