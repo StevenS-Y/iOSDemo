@@ -11,6 +11,7 @@
 #import "NewsMode.h"
 #import "NewsCell.h"
 #import "UIImageView+WebCache.h"
+#import "DataBase.h"
 #define NEWS @"http://sqt.9tong.com/sqt/industry/loadTopAticles.do?SC=11&inid=1"
 
 
@@ -37,6 +38,7 @@
 {
     [super viewDidLoad];
     [self layoutView];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(downLoadFinish) name:NEWS object:nil];
     _downLoadManager = [DownLoadManager sharedDownLoadManager];
     [_downLoadManager addDownLoadWithURLString:NEWS andType:NEWSTYPE];
@@ -48,10 +50,11 @@
     [_tableView reloadData];
 }
 
+
 - (void)layoutView{
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 568 - 64) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 568) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
@@ -63,22 +66,26 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-     NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[NewsCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
-    cell.title = ((NewsMode *)_dataArray[indexPath.row]).title;
-    cell.description = ((NewsMode *)_dataArray[indexPath.row]).description;
+    cell.titleLab.text = ((NewsMode *)_dataArray[indexPath.row]).title;
+    cell.descriptionLab.text = ((NewsMode *)_dataArray[indexPath.row]).description;
     [cell.image setImageWithURL:[NSURL URLWithString:((NewsMode *)_dataArray[indexPath.row]).imageURL]];
-    NSLog(@"%@",((NewsMode *)_dataArray[indexPath.row]).title);
-    NSLog(@"%@",((NewsMode *)_dataArray[indexPath.row]).description);
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    return 150;
 }
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    DataBase *dataBase = [[DataBase alloc] init];
+//    [dataBase collectNewsWithTitle:((NewsMode *)_dataArray[indexPath.row]).title Description:((NewsMode *)_dataArray[indexPath.row]).description imageURL:((NewsMode *)_dataArray[indexPath.row]).imageURL];
+//    NSLog(@"%@/Library/Caches/Test.db",NSHomeDirectory());
+//}
 
 - (void)didReceiveMemoryWarning
 {

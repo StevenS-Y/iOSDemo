@@ -33,7 +33,9 @@
 
     _circle = [[bezierPath alloc] initWithFrame:CGRectMake(150, 150, 100, 100)];
     [_circle startAnimation];
-
+    
+    NSLog(@"cache dir is %@", NSHomeDirectory());
+ 
     // ------------ for test -------------
 //    [_circle stopAnimation];
     

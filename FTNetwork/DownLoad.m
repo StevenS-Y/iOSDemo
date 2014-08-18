@@ -29,6 +29,8 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
     NSLog(@"数据下载完毕");
     [self.delegate downLoadDataFinishWithClass:self];
+    NSData *dataa = [NSData dataWithData:_data];
+    [dataa writeToFile:@"%@/Library/Caches" atomically:YES];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{

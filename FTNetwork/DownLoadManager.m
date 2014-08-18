@@ -55,18 +55,16 @@ static DownLoadManager *_sharedDownLoadManager;
     {
         [_taskDict removeObjectForKey:dl.DownLoadURLString];
         
-        NSMutableArray * allArray = [[NSMutableArray alloc] init];
         NSDictionary * dict = rootDict[@"Result"];
-        
+        NSMutableArray *allArray = [[NSMutableArray alloc] init];
         for (NSDictionary * linksDict in dict[@"links"])
         {
             NewsMode *nm = [[NewsMode alloc] init];
             nm.title = linksDict[@"articleName"];
             nm.description = linksDict[@"introduction"];
-            nm.imageURL = [NSString stringWithFormat:@"http://sqt.9tong.com/sqt%@",linksDict[@"pic"]];
+            nm.imageURL = [NSString stringWithFormat:@"http://sqt.9tong.com%@",linksDict[@"pic"]];
             [allArray addObject:nm];
         }
-        
         [_resultDict setObject:allArray forKey:dl.DownLoadURLString];
         [[NSNotificationCenter defaultCenter] postNotificationName:dl.DownLoadURLString object:nil];
     }

@@ -46,11 +46,11 @@
     [_dataBase close];
 }
 
-- (NSMutableArray *)GettingDataWithTitle:(NSString *)title{
+- (NSMutableArray *)GettingDataWithURL:(NSString *)URL{
     
     NSMutableArray *dataArray = [[NSMutableArray alloc] init];
     [_dataBase open];
-    FMResultSet *result = [_dataBase executeQuery:@"select * from data where title = ?",title];
+    FMResultSet *result = [_dataBase executeQuery:@"select * from data where imageURL = ?",URL];
     while ([result next]) {
         NewsMode *nm = [[NewsMode alloc] init];
         nm.title = [result stringForColumn:@"title"];

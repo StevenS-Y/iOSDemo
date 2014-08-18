@@ -14,6 +14,6 @@
 //存储数据
 - (void)collectNewsWithTitle:(NSString *)titile Description:(NSString *)description imageURL:(NSString *)imageURL;
 //取数据
-- (NSMutableArray *)GettingDataWithTitle:(NSString *)title;
+- (NSMutableArray *)GettingDataWithURL:(NSString *)URL;
 
 @end

@@ -10,8 +10,8 @@
 
 @interface NewsCell : UITableViewCell
 
-@property (nonatomic,strong) NSString *title;
-@property (nonatomic,strong) NSString *description;
+@property (nonatomic,strong) UILabel *titleLab;
+@property (nonatomic,strong) UILabel *descriptionLab;
 @property (nonatomic,strong) UIImageView *image;
 
 
