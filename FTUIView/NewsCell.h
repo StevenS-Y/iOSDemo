@@ -14,4 +14,5 @@
 @property (nonatomic,strong) NSString *description;
 @property (nonatomic,strong) UIImageView *image;
 
+
 @end

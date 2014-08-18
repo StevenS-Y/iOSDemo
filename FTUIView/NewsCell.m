@@ -28,7 +28,6 @@
     
     UILabel *desLab = [[UILabel alloc] initWithFrame:CGRectMake(100, 30, 220, 70)];
     desLab.text = _description;
-    desLab.backgroundColor = [UIColor magentaColor];
     [view addSubview:desLab];
     
     _image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 30, 100, 70)];

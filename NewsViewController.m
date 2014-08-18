@@ -68,9 +68,10 @@
         cell = [[NewsCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
     cell.title = ((NewsMode *)_dataArray[indexPath.row]).title;
-    NSLog(@"%@",((NewsMode *)_dataArray[indexPath.row]).title);
     cell.description = ((NewsMode *)_dataArray[indexPath.row]).description;
     [cell.image setImageWithURL:[NSURL URLWithString:((NewsMode *)_dataArray[indexPath.row]).imageURL]];
+    NSLog(@"%@",((NewsMode *)_dataArray[indexPath.row]).title);
+    NSLog(@"%@",((NewsMode *)_dataArray[indexPath.row]).description);
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
