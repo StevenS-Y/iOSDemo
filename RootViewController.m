@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "NewsViewController.h"
 #import "CircleView.h"
 @interface RootViewController ()
 
@@ -21,7 +22,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        //js is a fucking  bitch
+
     }
     return self;
 }
@@ -35,10 +36,17 @@
 
     // ------------ for test -------------
 //    [_circle stopAnimation];
-
-
+    
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(onClick)];
+    
+    self.navigationItem.rightBarButtonItem = item;
     
     [self.view addSubview:_circle];
+}
+
+- (void)onClick{
+    NewsViewController *nvc = [[NewsViewController alloc] init];
+    [self.navigationController pushViewController:nvc animated:YES];
 }
 
 - (void)stopAnimation{
