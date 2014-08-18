@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		9749ECB419A1EB0200333B3E /* NewsMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749ECAA19A1EB0200333B3E /* NewsMode.m */; };
 		9749ECB519A1EB0200333B3E /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749ECAD19A1EB0200333B3E /* DataBase.m */; };
-		9749ECB619A1EB0200333B3E /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749ECAF19A1EB0200333B3E /* DownLoad.m */; };
-		9749ECB719A1EB0200333B3E /* DownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749ECB119A1EB0200333B3E /* DownLoadManager.m */; };
 		9749ECB819A1EB0200333B3E /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749ECB319A1EB0200333B3E /* NewsCell.m */; };
+		9749ECBE19A1EC2B00333B3E /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749ECBB19A1EC2B00333B3E /* DownLoad.m */; };
+		9749ECBF19A1EC2B00333B3E /* DownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749ECBD19A1EC2B00333B3E /* DownLoadManager.m */; };
 		97BE3440199EFAE600ED3450 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BE343F199EFAE600ED3450 /* Foundation.framework */; };
 		97BE3442199EFAE600ED3450 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BE3441199EFAE600ED3450 /* CoreGraphics.framework */; };
 		97BE3444199EFAE600ED3450 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BE3443199EFAE600ED3450 /* UIKit.framework */; };
@@ -59,12 +59,12 @@
 		9749ECAA19A1EB0200333B3E /* NewsMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMode.m; sourceTree = "<group>"; };
 		9749ECAC19A1EB0200333B3E /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBase.h; sourceTree = "<group>"; };
 		9749ECAD19A1EB0200333B3E /* DataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBase.m; sourceTree = "<group>"; };
-		9749ECAE19A1EB0200333B3E /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
-		9749ECAF19A1EB0200333B3E /* DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoad.m; sourceTree = "<group>"; };
-		9749ECB019A1EB0200333B3E /* DownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadManager.h; sourceTree = "<group>"; };
-		9749ECB119A1EB0200333B3E /* DownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadManager.m; sourceTree = "<group>"; };
 		9749ECB219A1EB0200333B3E /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
 		9749ECB319A1EB0200333B3E /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		9749ECBA19A1EC2B00333B3E /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
+		9749ECBB19A1EC2B00333B3E /* DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoad.m; sourceTree = "<group>"; };
+		9749ECBC19A1EC2B00333B3E /* DownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadManager.h; sourceTree = "<group>"; };
+		9749ECBD19A1EC2B00333B3E /* DownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadManager.m; sourceTree = "<group>"; };
 		97BE343C199EFAE600ED3450 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BE343F199EFAE600ED3450 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		97BE3441199EFAE600ED3450 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -159,19 +159,27 @@
 			children = (
 				9749ECAC19A1EB0200333B3E /* DataBase.h */,
 				9749ECAD19A1EB0200333B3E /* DataBase.m */,
-				9749ECAE19A1EB0200333B3E /* DownLoad.h */,
-				9749ECAF19A1EB0200333B3E /* DownLoad.m */,
-				9749ECB019A1EB0200333B3E /* DownLoadManager.h */,
-				9749ECB119A1EB0200333B3E /* DownLoadManager.m */,
 				9749ECB219A1EB0200333B3E /* NewsCell.h */,
 				9749ECB319A1EB0200333B3E /* NewsCell.m */,
 			);
 			path = FTUIView;
 			sourceTree = "<group>";
 		};
+		9749ECB919A1EC2B00333B3E /* FTNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				9749ECBA19A1EC2B00333B3E /* DownLoad.h */,
+				9749ECBB19A1EC2B00333B3E /* DownLoad.m */,
+				9749ECBC19A1EC2B00333B3E /* DownLoadManager.h */,
+				9749ECBD19A1EC2B00333B3E /* DownLoadManager.m */,
+			);
+			path = FTNetwork;
+			sourceTree = "<group>";
+		};
 		97BE3433199EFAE600ED3450 = {
 			isa = PBXGroup;
 			children = (
+				9749ECB919A1EC2B00333B3E /* FTNetwork */,
 				9749ECA819A1EB0200333B3E /* FTEntity */,
 				9749ECAB19A1EB0200333B3E /* FTUIView */,
 				97DC27D519A1D2C400EF8256 /* 8.18Task */,
@@ -402,10 +410,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				97DC280119A1E25000EF8256 /* UIImageView+WebCache.m in Sources */,
+				9749ECBF19A1EC2B00333B3E /* DownLoadManager.m in Sources */,
 				9749ECB419A1EB0200333B3E /* NewsMode.m in Sources */,
 				97BE3450199EFAE600ED3450 /* SYAppDelegate.m in Sources */,
-				9749ECB719A1EB0200333B3E /* DownLoadManager.m in Sources */,
 				97DC27FF19A1E25000EF8256 /* SDWebImagePrefetcher.m in Sources */,
+				9749ECBE19A1EC2B00333B3E /* DownLoad.m in Sources */,
 				97BE3476199F212900ED3450 /* CircleView.m in Sources */,
 				97DC27CD19A1C77900EF8256 /* FMDatabase.m in Sources */,
 				97DC280019A1E25000EF8256 /* UIButton+WebCache.m in Sources */,
@@ -420,7 +429,6 @@
 				9749ECB819A1EB0200333B3E /* NewsCell.m in Sources */,
 				9749ECB519A1EB0200333B3E /* DataBase.m in Sources */,
 				97DC27FE19A1E25000EF8256 /* SDWebImageManager.m in Sources */,
-				9749ECB619A1EB0200333B3E /* DownLoad.m in Sources */,
 				97DC27D019A1C77900EF8256 /* FMDatabaseQueue.m in Sources */,
 				97DC27DE19A1D8C300EF8256 /* NewsViewController.m in Sources */,
 			);
