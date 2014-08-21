@@ -10,10 +10,12 @@
 #import "NewsMode.h"
 @implementation DownLoadManager
 {
-    NSMutableDictionary * _taskDict;
-    NSMutableDictionary * _resultDict;
+    NSMutableDictionary *_taskDict;
+    NSMutableDictionary *_resultDict;
 }
+
 static DownLoadManager *_sharedDownLoadManager;
+
 + (DownLoadManager *)sharedDownLoadManager{
     if (!_sharedDownLoadManager) {
         _sharedDownLoadManager = [[DownLoadManager alloc] init];
@@ -70,25 +72,3 @@ static DownLoadManager *_sharedDownLoadManager;
     }
 }
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

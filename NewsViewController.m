@@ -81,11 +81,12 @@
     return 150;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    DataBase *dataBase = [[DataBase alloc] init];
 //    [dataBase collectNewsWithTitle:((NewsMode *)_dataArray[indexPath.row]).title Description:((NewsMode *)_dataArray[indexPath.row]).description imageURL:((NewsMode *)_dataArray[indexPath.row]).imageURL];
 //    NSLog(@"%@/Library/Caches/Test.db",NSHomeDirectory());
-//}
+    NSLog(@"CLICK");
+}
 
 - (void)didReceiveMemoryWarning
 {
