@@ -9,17 +9,14 @@
 #import "RootViewController.h"
 #import "NewsViewController.h"
 #import "CircleView.h"
+
+#import "DownloadView.h"
 @interface RootViewController ()
 
 @end
 
 @implementation RootViewController
-{
-    bezierPath *_circle;
-    
-    CAShapeLayer *_outerCircleLayer;
-    UIBezierPath *_outerCirclePath;
-}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,13 +32,10 @@
 {
     [super viewDidLoad];
     [self LayoutItem];
-    _circle = [[bezierPath alloc] initWithFrame:CGRectMake(150, 150, 100, 100)];
-    [_circle startAnimation];
-    
-    
-    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(100, 200, 50, 20)];
-    tf.borderStyle = UITextBorderStyleRoundedRect;
-    tf.backgroundColor = [UIColor blackColor];
+
+    DownloadView *animation = [[DownloadView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:animation];
+  
     /* ------文本框shake-------
 
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
@@ -80,35 +74,7 @@
     animation.removedOnCompletion = NO;
     [tf.layer addAnimation:animation forKey:@"fall"];
      */
-    /* ----   圆周滚动  ----
-    CGRect boundingRect = CGRectMake(-100, 0, 200, 200);
-    
-    CAKeyframeAnimation *orbit = [CAKeyframeAnimation animation];
-    orbit.keyPath = @"position";
-    orbit.path = CFAutorelease(CGPathCreateWithEllipseInRect(boundingRect, NULL));
-    orbit.duration = 4;
-    orbit.additive = YES;
-    orbit.repeatCount = HUGE_VALF;
-    orbit.calculationMode = kCAAnimationPaced;
-    orbit.rotationMode = kCAAnimationRotateAuto;
-    [tf.layer addAnimation:orbit forKey:@"Circle"];
-    */
-    
-    RBBTweenAnimation *animation = [RBBTweenAnimation animation];
-    animation.keyPath = @"position.x";
-    animation.fromValue = @50;
-    animation.toValue = @150;
-    animation.duration = 1;
-    
-    animation.easing = RBBCubicBezier(0.68, -0.55, 0.735, 1.55);
-    [self.view addSubview:tf];
-    
-    
-    
-    
 
-    
-//    [self.view addSubview:_circle];
 }
 
 - (void)LayoutItem{

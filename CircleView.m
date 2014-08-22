@@ -33,7 +33,7 @@
         [self layoutInsideCircleLayer];
 
         
-        _timer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(progress:) userInfo:nil repeats:YES];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(progress:) userInfo:nil repeats:YES];
     }
     return self;
 }
@@ -42,10 +42,10 @@
 
     _insideCircleLayer = [CAShapeLayer layer];
     _insideCircleLayer.bounds = CGRectMake(0, 0, 100, 100);
-    _insideCircleLayer.lineWidth = 5;
+    _insideCircleLayer.lineWidth = 6;
     _insideCircleLayer.position = center;
     _insideCircleLayer.fillColor = [UIColor clearColor].CGColor;
-    _insideCircleLayer.strokeColor = [[UIColor redColor]CGColor];
+    _insideCircleLayer.strokeColor = [[UIColor blackColor]CGColor];
     
     [self.layer addSublayer:_insideCircleLayer];
     
@@ -53,7 +53,7 @@
 
 - (void)laoutOuterCircleLayer{
     
-    _outerCirclePath = [UIBezierPath bezierPathWithArcCenter:center radius:45 startAngle:M_PI*(0)/180.0 endAngle:2 * M_PI clockwise:YES];
+    _outerCirclePath = [UIBezierPath bezierPathWithArcCenter:center radius:149 startAngle:M_PI*(0)/180.0 endAngle:2 * M_PI clockwise:YES];
     
     _outerCircleLayer = [CAShapeLayer layer];
     _outerCircleLayer.bounds = CGRectMake(0, 0, 100, 100);
@@ -63,6 +63,7 @@
     _outerCircleLayer.lineWidth = 3;
     _outerCircleLayer.strokeColor = [[UIColor blueColor] CGColor];
     _outerCircleLayer.path = [_outerCirclePath CGPath];
+    
     [self.layer addSublayer:_outerCircleLayer];
 }
 
@@ -75,10 +76,10 @@
 }
 
 - (void)progress:(NSTimer *)timer{
-    _insideCirclePath = [UIBezierPath bezierPathWithArcCenter:center radius:42 startAngle:0 endAngle:M_PI*(_i * 3.6) / 180 clockwise:YES];
+    _insideCirclePath = [UIBezierPath bezierPathWithArcCenter:center radius:144 startAngle:0 endAngle:M_PI*(_i  * 0.36) / 180 clockwise:YES];
     
     _insideCircleLayer.path = [_insideCirclePath CGPath];
-    if (_i == 100 ) {
+    if (_i == 1000 ) {
         [_timer invalidate];
     }
     _i++;

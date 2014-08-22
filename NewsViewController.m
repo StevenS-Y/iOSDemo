@@ -37,6 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self layoutView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(downLoadFinish) name:NEWS object:nil];

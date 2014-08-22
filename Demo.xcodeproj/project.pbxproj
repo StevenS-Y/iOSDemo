@@ -13,6 +13,7 @@
 		9749ECBE19A1EC2B00333B3E /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749ECBB19A1EC2B00333B3E /* DownLoad.m */; };
 		9749ECBF19A1EC2B00333B3E /* DownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749ECBD19A1EC2B00333B3E /* DownLoadManager.m */; };
 		9749ECC119A1FEE100333B3E /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 9749ECC019A1FEE100333B3E /* test.png */; };
+		977B661119A6E663003C308D /* DownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977B661019A6E662003C308D /* DownloadView.m */; };
 		97BE3440199EFAE600ED3450 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BE343F199EFAE600ED3450 /* Foundation.framework */; };
 		97BE3442199EFAE600ED3450 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BE3441199EFAE600ED3450 /* CoreGraphics.framework */; };
 		97BE3444199EFAE600ED3450 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BE3443199EFAE600ED3450 /* UIKit.framework */; };
@@ -67,6 +68,8 @@
 		9749ECBC19A1EC2B00333B3E /* DownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadManager.h; sourceTree = "<group>"; };
 		9749ECBD19A1EC2B00333B3E /* DownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadManager.m; sourceTree = "<group>"; };
 		9749ECC019A1FEE100333B3E /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		977B660F19A6E662003C308D /* DownloadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadView.h; path = FTUIView/DownloadView.h; sourceTree = "<group>"; };
+		977B661019A6E662003C308D /* DownloadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadView.m; path = FTUIView/DownloadView.m; sourceTree = "<group>"; };
 		97BE343C199EFAE600ED3450 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BE343F199EFAE600ED3450 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		97BE3441199EFAE600ED3450 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -189,6 +192,8 @@
 				97DC27DD19A1D8C300EF8256 /* NewsViewController.m */,
 				97BE3471199EFEB000ED3450 /* RootViewController.h */,
 				97BE3472199EFEB000ED3450 /* RootViewController.m */,
+				977B660F19A6E662003C308D /* DownloadView.h */,
+				977B661019A6E662003C308D /* DownloadView.m */,
 				97BE3474199F212900ED3450 /* CircleView.h */,
 				97BE3475199F212900ED3450 /* CircleView.m */,
 				97DC27E419A1E25000EF8256 /* SDWebImage */,
@@ -416,6 +421,7 @@
 				97DC280019A1E25000EF8256 /* UIButton+WebCache.m in Sources */,
 				97DC27D119A1C77900EF8256 /* FMResultSet.m in Sources */,
 				97DC27FC19A1E25000EF8256 /* SDWebImageDecoder.m in Sources */,
+				977B661119A6E663003C308D /* DownloadView.m in Sources */,
 				97DC27FB19A1E25000EF8256 /* SDImageCache.m in Sources */,
 				97BE344C199EFAE600ED3450 /* main.m in Sources */,
 				97DC27FD19A1E25000EF8256 /* SDWebImageDownloader.m in Sources */,
