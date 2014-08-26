@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RootViewController : UIViewController
-
+#import "BMKMapView.h"
+#import "MyAnnotation.h"
+@interface RootViewController : UIViewController<BMKMapViewDelegate>
+{
+    BMKMapView *mapView;
+}
 
 
 @end

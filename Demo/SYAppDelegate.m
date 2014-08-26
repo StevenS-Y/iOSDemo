@@ -15,9 +15,35 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    _mapManager = [[BMKMapManager alloc] init];
+    [_mapManager start:@"WTdjfXNDGx0PSc7Hhr6KTaPf" generalDelegate:self];
+    
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[RootViewController alloc] init]];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)onGetNetworkState:(int)iError{
+    if (iError == 0)
+    {
+        NSLog(@"网络连接正常");
+    }
+    else
+    {
+        NSLog(@"网络错误:%d",iError);
+    }
+}
+
+- (void)onGetPermissionState:(int)iError{
+    if (iError == 0)
+    {
+        NSLog(@"授权成功");
+    }
+    else
+    {
+        NSLog(@"授权失败:%d",iError);
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -25,8 +25,9 @@
 }
 
 - (void)layoutView{
+    
     _layer = [CAShapeLayer layer];
-    _layer.borderColor = [[UIColor redColor] CGColor];
+    _layer.borderColor = [[UIColor blueColor] CGColor];
     _layer.borderWidth = 3;
     _layer.frame = CGRectMake(10, 100, 300, 300);
     _layer.fillColor = [[UIColor whiteColor]CGColor];
